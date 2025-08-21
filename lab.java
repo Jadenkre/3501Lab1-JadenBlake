@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class lab {
     long time = System.currentTimeMillis();
+    static long timeStart;
     private static int permutationCount;
     private static Scanner input = new Scanner(System.in);
 
@@ -27,6 +28,7 @@ public class lab {
     }
 
     public static void generatePermutationsIndex(int n) {
+        timeStart = System.currentTimeMillis();
         int[] array = new int[n];
         for (int i = 0; i < n; i++) {
             array[i] = i + 1;
@@ -36,7 +38,6 @@ public class lab {
 
 
     public static void main(String[] args) {
-        long timeStart = System.currentTimeMillis();
         System.out.print("Enter the value of n: ");
         generatePermutationsIndex(input.nextInt());
         System.out.println("Permutation Count: " + permutationCount);
