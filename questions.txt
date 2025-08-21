@@ -5,4 +5,15 @@ something like 4 would be 4! or 1 * 2 * 3 * 4 which would be 24.
 
 
 Based on your timing results and on approximation of the number of lines printed please estimate how long your program would run for n = 15 and for n = 20. Show how you have computed the estimate.
-
+Running the results for 5 and 10 we get: 27ms runtime for 5 and 228904ms for 10.
+if we divide each by their number of permutations (5! / 27 and 10! / 228904)
+4.444 for 5,
+7.58 for 6, +3.14
+14 for 7, +6.42
+16.87 for 8, +2.87
+17.87 for 9, +1
+20.87 for 10 +3
+averaging these values give us a result of 16.33 so we can take this average and times it
+by the factorial of our given permutations
+so 15! would be around 22243.899 hours
+and 20! would be around 4724238.61581 years...
