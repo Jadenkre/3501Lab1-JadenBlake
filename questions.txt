@@ -1,0 +1,8 @@
+What is the number of lines of output as a function of n? Explain how you computed it.
+
+Writing out the numbers we find that when increasing that it is factorial to the number of permutations. So the total number of combinations for
+something like 4 would be 4! or 1 * 2 * 3 * 4 which would be 24.
+
+
+Based on your timing results and on approximation of the number of lines printed please estimate how long your program would run for n = 15 and for n = 20. Show how you have computed the estimate.
+
