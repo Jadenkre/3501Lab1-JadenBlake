@@ -1,9 +1,11 @@
 // Jaden, Blake
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class lab {
     long time = System.currentTimeMillis();
     private static int permutationCount;
+    private static Scanner input = new Scanner(System.in);
 
     private static void generatePermutations(int[] n, int start, int end){
         if (start == end) { // if the two pointers are at the same location then we print the array
@@ -35,7 +37,8 @@ public class lab {
 
     public static void main(String[] args) {
         long timeStart = System.currentTimeMillis();
-        generatePermutationsIndex(10);
+        System.out.print("Enter the value of n: ");
+        generatePermutationsIndex(input.nextInt());
         System.out.println("Permutation Count: " + permutationCount);
         System.out.println("Time taken: " + (System.currentTimeMillis() - timeStart) + " ms");
     }
