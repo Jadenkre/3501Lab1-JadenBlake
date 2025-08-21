@@ -42,5 +42,6 @@ public class lab {
         generatePermutationsIndex(input.nextInt());
         System.out.println("Permutation Count: " + permutationCount);
         System.out.println("Time taken: " + (System.currentTimeMillis() - timeStart) + " ms");
+        input.close();
     }
 }
