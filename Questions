@@ -1,31 +1,38 @@
 What is the number of lines of output as a function of n? Explain how you computed it.
 
-Writing out the numbers we find that when increasing that it is factorial to the number of permutations. So the total number of combinations for
-something like 4 would be 4! or 1 * 2 * 3 * 4 which would be 24.
+Writing out the numbers, we find that when increasing that it is factorial to the number of permutations. So the total number of combinations for
+Something like 4 would be 4! Or 1 * 2 * 3 * 4, which would be 24.
 
+Based on your timing results and on an approximation of the number of lines printed, please estimate how long your program would run for n = 15 and for n = 20.
+Show how you have computed the estimate.
 
-Based on your timing results and on approximation of the number of lines printed please estimate how long your program would run for n = 15 and for n = 20. Show how you have computed the estimate.
 Running the results for 5 and 10 we get: 27ms runtime for 5 and 228904ms for 10.
-if we divide each by their number of permutations (27ms / 5! and 228904ms /10!)
 
- p = n! # The amount of permutations a given integer
+If we divide each by their number of permutations (27ms / 5! And 228904ms /10!)
+P = n! # The number of permutations of a given integer
 
-27ms / p(5) = .225ms/per p
-228904ms / p(10) = .063ms/per p
+27ms / p(5) = .225ms per p
+228904ms / p(10) = .063ms per p
 
-(.063ms/per p)+(.225ms/per p)/2(the amount of sums) = .144ms/ per p
+(.063ms/per p)+(.225ms/per p)/2(the amount of sum) = .144ms/ per p
 
-hp = the highest permutation that we can realisticly run
 
-although this would give a average run for permutations, the issue with this is that as n grows the amount of time per permutation decreases.
-For a more accurate evalutation of time for higher factorials we would want to use something like { (p(hp)/hp) * n! } where hp = 10
+Hp = the highest permutation that we can realistically run
 
-So, for the two factorials wher n = 15,20
+Although this would give an average run for permutations, the issue with this is that, as n grows, the amount of time per permutation decreases.
+For a more accurate evaluation of time for higher factorials, we would want to use something like { (p(hp)/hp) * n!  where hp = 10
+
+So, for the two factorials where n = 15,20
+
 [Functions to find time in ms]
+
 - t(n = 15, hp = 10) = ((p(10)/10!) * 15!)
-result : 82,383,485,184ms = 22,884hrs = 953.5days = 2.61 years
+
+Result : 82,383,485,184ms = 22,884hrs = 953.5days = 2.61 years
 
 - t(n = 20, hp = 10) = ((p(10)/10!) * 20!)
-result : 153,272,826,515,128,320ms = 42,575,785,131hrs = 1,773,991,047.1days = 4856922.78467years
+Result : 153,272,826,515,128,320ms = 42,575,785,131hrs = 1,773,991,047.1days = 4,856,922.78467years
 
--- Used google to convert the amounts of time to other measures
+
+-- Used Grammercheck to fix any grammer issues link( https://www.grammarcheck.net/editor/ )
+-- Used Google to convert the amount of time to other measures ( https://www.google.com/search?q=ms+to+hrs+calculator )
